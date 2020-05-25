@@ -1,3 +1,4 @@
+require 'config/environment.rb'
 class Song
   attr_accessor :artist, :genre
   attr_reader :name
