@@ -1,4 +1,4 @@
-require 'config/environment.rb'
+require 'artist.rb'
 class Song
   attr_accessor :artist, :genre
   attr_reader :name
@@ -12,7 +12,7 @@ class Song
   def self.create(name, artist = nil, genre =nil)
     song = self.new(name)
     if artist!= nil
-      Artist.add_song(song.name)
+      artist.add_song(song.name)
     end
     if genre!= nil
       song.genre = Genre.new(genre)
